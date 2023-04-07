@@ -1,28 +1,30 @@
 {
-    "name": "team-profile-generator-10",
+    "name": "object-oriented-programming-companygenerator",
     "version": "1.0.0",
-    "description": "Object-Oriented Programming Challenge",
-    "main": "Index.js",
+    "description": "Team Profile Generator",
+    "main": "index.js",
     "directories": {
-        "lib": "lib"
-    },
-    "dependencies": {
-        "inquirer": "^7.3.3"
-    },
-    "devDependencies": {
-        "jest": "^26.6.3"
+      "lib": "lib",
+      "test": "test"
     },
     "scripts": {
-        "test": "jest"
+      "start": "node index.js",
+      "test": "jest"
     },
     "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Brooksteven/Profile-Generator.git"
+      "type": "git",
+      "url": "https://github.com/Reggiejr44/object-oriented-programming-companygenerator"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Brooksteven/Profile-Generator/issues"
+      "url": "https://github.com/Reggiejr44/object-oriented-programming-companygenerator/issues"
     },
-    "homepage": "https://github.com/Brooksteven/Profile-Generatorr#readme"
-}
+    "homepage": "https://github.com/Reggiejr44/object-oriented-programming-companygenerator",
+    "dependencies": {
+      "inquirer": "^8.2.4"
+    },
+    "devDependencies": {
+      "jest": "^29.3.1"
+    }
+  }

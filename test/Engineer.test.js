@@ -1,26 +1,25 @@
-const { test, expect } = require('@jest/globals');
-const Engineer = require('../lib/Engineer');
 
-test('gets Engineer GitHub username', () => {
-    const data = {
-        name: "Brooklynn",
-        id: 1,
-        email: "Brooksteven54@gmail.com",
-        username: 'Brooksteven'
-    };
-    const engineer = new Engineer(data);
+const Engineer = require('../lib/engineer');
 
-    expect(engineer.username).toBe('Brooksteven');
-});
+const engineer = new Engineer('Brook', 2, 'Brook@test.com', 'Brooksteven');
+describe('Engineer class', () => {
+  test('gets the name', () => {
+    expect(engineer.getName()).toBe('Brook');
+  });
+  
+  test('gets the id', () => {
+    expect(engineer.getId()).toBe(2);
+  });
 
-test('gets Engineer role', () => {
-    const data = {
-        name: "Brooklynn    ",
-        id: 1,
-        email: "Brooksteven54@gmail.com",
-        username: 'Brooksteven'
-    };
-    const engineer = new Engineer(data);
+  test('gets the Email', () => {
+    expect(engineer.getEmail()).toBe('Brook@test.com');
+  });
 
-    expect(engineer.role).toBe('Engineer');
+  test('gets the gitHub account', () => {
+    expect(engineer.getGitHub()).toBe('Brooksteven');
+  });
+
+  test('gets the role', () => {
+    expect(engineer.getRole()).toBe('Engineer');
+  });
 });

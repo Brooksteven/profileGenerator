@@ -1,26 +1,24 @@
-const { test, expect } = require('@jest/globals');
-const Intern = require('../lib/Intern');
+const Intern = require('../lib/intern');
 
-test('gets Intern school', () => {
-    const data = {
-        name: "Brooklynn",
-        id: 1,
-        email: "Brooksteven54@gmail.com",
-        school: 'Georgia Tech'
-    };
-    const intern = new Intern(data);
+const intern = new Intern('Brook', 3, 'Brook@test.com', 'GTU');
+describe('Intern class', () => {
+  test('gets the name', () => {
+    expect(intern.getName()).toEqual('Brook');
+  });
+  
+  test('gets the id', () => {
+    expect(intern.getId()).toEqual(3);
+  });
 
-    expect(intern.school).toBe('Georgia Tech');
-});
+  test('gets the Email', () => {
+    expect(intern.getEmail()).toEqual('Brook@test.com');
+  });
 
-test('gets Intern role', () => {
-    const data = {
-        name: "Brooklynn",
-        id: 1,
-        email: "Brooksteven54@gmail.com",
-        school: 'Georgia Tech'
-    };
-    const intern = new Intern(data);
+  test('gets the school', () => {
+    expect(intern.getSchool()).toEqual('GTU');
+  });
 
-    expect(intern.role).toBe('Intern');
+  test('gets the role', () => {
+    expect(intern.getRole()).toEqual('Intern');
+  });
 });

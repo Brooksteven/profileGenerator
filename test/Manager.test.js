@@ -1,27 +1,24 @@
-const { test, expect } = require('@jest/globals');
-const Manager = require('../lib/Manager');
+const Manager = require('../lib/manager');
 
+const manager = new Manager('Brook', 1, 'Brook@test.com', 101);
+describe('Manager class', () => {
+  test('gets the name', () => {  
+    expect(manager.getName()).toBe('Brook');
+  });
+  
+  test('gets the id', () => {
+    expect(manager.getId()).toBe(1);
+  });
 
-test('gets Manager office number', () => {
-    const data = {
-        name: "Brooklynn",
-        id: 1,
-        email: "Brooksteven54@gmail.com",
-        officeNumber: 1
-    };
-    const manager = new Manager(data);
+  test('gets the Email', () => {
+    expect(manager.getEmail()).toBe('Brook@test.com');
+  });
 
-    expect(manager.officeNumber).toEqual(1);
-});
+  test('gets the office number', () => {
+    expect(manager.getOfficeNumber()).toBe(101);
+  });
 
-test('gets Manager role', () => {
-    const data = {
-        name: "Brooklynn",
-        id: 1,
-        email: "Brooksteven54@gmail.com",
-        officeNumber: 1
-    };
-    const manager = new Manager(data);
-
-    expect(manager.role).toBe('Manager');
+  test('gets the role', () => {
+    expect(manager.getRole()).toBe('Manager');
+  });
 });
