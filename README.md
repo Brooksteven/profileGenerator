@@ -34,5 +34,5 @@ npm install jest
 and run `npm run test` from the command line.
     
 ## Questions
-If you have any questions about the repo, please [open an issue](https://github.com/deckiedevs/team-profile-generator/issues) or contact me via email at deckiedevs@gmail.com. You can find more of my work on my GitHub, [deckiedevs](https://github.com/deckiedevs/).
+
     
